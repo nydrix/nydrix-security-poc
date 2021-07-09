@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  php:
+    image: php:7.4.3-apache
+    container_name: nydrix-oauth-php
+    ports:
+      - "8181:80"
+    restart: always
+    volumes: 
+      - D:\_GIT\GitHub\nydrix-security-poc\docker\php:/var/www/html
