@@ -48,7 +48,7 @@ import { MembersService } from './services/members.service';
           ['https://graph.microsoft.com/v1.0/me', ['User.Read']],
           [
             'http://localhost:8181/api/v1/*',
-            ['api://1e0feb1f-cf22-4265-9ad7-995a009f39ea/Hello'],
+            ['api://1e0feb1f-cf22-4265-9ad7-995a009f39ea/clubmanagement'],
           ],
           ['http://localhost:4200/about/', null],
         ]),

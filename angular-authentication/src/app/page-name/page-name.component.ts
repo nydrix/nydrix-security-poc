@@ -25,16 +25,17 @@ export class PageNameComponent implements OnInit {
     console.log('loginn');
     this.user$ = this.msalService.getProfile();
 
-    const requestObj = {
-      scopes: ['api://1e0feb1f-cf22-4265-9ad7-995a009f39ea/Hello'],
-    };
+    // Uncomment this for just getting a token to access the api.
+    // const requestObj = {
+    //   scopes: ['api://1e0feb1f-cf22-4265-9ad7-995a009f39ea/clubmanagement'],
+    // };
 
-    this.authService
-      .acquireTokenPopup(requestObj)
-      .subscribe((tokenResponse) => {
-        // Callback code here
-        console.log(tokenResponse.accessToken);
-      });
+    // this.authService
+    //   .acquireTokenPopup(requestObj)
+    //   .subscribe((tokenResponse) => {
+    //     // Callback code here
+    //     console.log(tokenResponse.accessToken);
+    //   });
 
     this.members$ = this.membersService.getMembers();
   }

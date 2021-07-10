@@ -62,7 +62,7 @@ class MembersController {
 		$result['clubs'] = $request->getAttribute('clubs');
 		$result['members'] = $this->testMemberList;
 
-		if(!in_array("ClubManager", $result['roles'])) {
+		if(!in_array("MemberManager", $result['roles'])) {
 			return $response->withStatus(401)->withJson([
 				'status' => 'Not allowed',
 				'message' => 'you are not allowed.'

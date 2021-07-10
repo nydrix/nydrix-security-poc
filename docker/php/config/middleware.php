@@ -75,46 +75,10 @@ BQIDAQAB
         return $response;
     });
 
+    // middle ware to add the clubs a user is linked to.
     $app->add(function (Request $request, RequestHandler $handler) {
-
-        // // get roles from bearer token
-        // $token;
-        // $header = $request->getHeaderLine($options["header"]);
-
-        // if (false === empty($header)) {
-        //     if (preg_match($options["regexp"], $header, $matches)) {
-        //         $token =  $matches[1];
-        //     }
-        // } else {
-        //     /* Token not found in header try a cookie. */
-        //     $cookieParams = $request->getCookieParams();
-
-        //     if (isset($cookieParams[$options["cookie"]])) {
-        //         if (preg_match($options["regexp"], $cookieParams[$options["cookie"]], $matches)) {
-        //             $token =  $matches[1];
-        //         } else {
-        //             $token =  $cookieParams[$options["cookie"]];
-        //         }
-        //     };
-        //     /* If everything fails log and throw. */
-        //     //no token
-        // }
-
-        // if (false === empty($token)) {
-        //     $decoded = JWT::decode(
-        //         $token,
-        //         $options["secret"],
-        //         (array) $options["algorithm"]
-        //     );
-
-        //      /* Add decoded token to request as attribute when requested. */
-        //     if ($options["idtokenAttribute"]) {
-        //         $request = $request->withAttribute($options["idtokenAttribute"], $decoded);
-        //     }
-        // }
        
-
-        // todo : add code to load the user club acesses
+        // todo : add code to load the user club accesses
         $request = $request->withAttribute('clubs', ['4066', '4000']);
         // this can be added to a session so you don't have to feth it everytime
 
